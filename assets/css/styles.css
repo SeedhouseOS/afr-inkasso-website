@@ -410,8 +410,15 @@ hr { border: 0; border-top: 1px solid var(--color-border); margin: 2.5rem 0; }
 .contact-info dd { margin: 0 0 0.4em; }
 
 .hours-table { border-collapse: collapse; width: 100%; }
-.hours-table td { padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border); }
-.hours-table td:first-child { font-weight: 600; color: var(--color-primary); }
+.hours-table td { padding: 0.45rem 0; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+.hours-table td:first-child { font-weight: 600; color: var(--color-primary); white-space: nowrap; padding-right: 1rem; }
+.hours-table td:last-child { font-variant-numeric: tabular-nums; text-align: right; }
+.hours-table tr:last-child td { border-bottom: none; }
+
+/* Footer override — dark bg context */
+.site-footer .hours-table td { border-bottom-color: rgba(255,255,255,0.10); color: #e2e8f0; }
+.site-footer .hours-table td:first-child { color: var(--accent-300); }
+.site-footer .hours-table tr:last-child td { border-bottom: none; }
 
 /* --- Footer --- */
 .site-footer {
